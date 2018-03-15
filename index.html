@@ -21,9 +21,33 @@
 				</nav>
 				
 				<div class="sliders">
-					  <h1>Долго, дорого,<br>скрупулезно.</h1>
-							<p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+					<input class="visually-hidden" type="radio" id="slide1" name="toggle" checked>
+					<input class="visually-hidden" type="radio" id="slide2" name="toggle">
+					<input class="visually-hidden" type="radio" id="slide3" name="toggle">
+					<div class="slider-controls">
+						<label class="control-1" for="slide1">Первый</label>
+						<label class="control-2" for="slide2">Второй</label>
+						<label class="control-3" for="slide3">Третий</label>
+					</div>
+					<ul class="slider-list">
+						<li class="slider-item">
+							<h1>Долго, дорого,<br>скрупулезно.</h1>
+							<p>Математически выверенный дизайн<br>
+							   для вашего сайта или мобильного приложения.</p>
 							<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+						</li>
+						<li class="slider-item">
+							<h1>Любим математику как никто другой</h1>
+							<p>Никакого креатива, только математические формулы<br>
+							   для расчета идеальных пропорций.</p>
+							<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+						</li>
+						<li class="slider-item">
+							<h1>Только ночь,<br>только хардкор</h1>
+							<p>Работать днем,как все? Мы против этого.<br>
+							   Ближе к полуночи работа только начинается.</p>
+							<a class="btn" href="#">УЗНАТЬ БОЛЬШЕ</a>
+					</ul>
 		  		</div>
 		</header>
 	
@@ -108,7 +132,7 @@
 		</main>
 		
 			<section class="map">
-					<h2 class="visually-hidden">Наши контакты</h2>
+				<h2 class="visually-hidden">Наши контакты</h2>
 			</section>
 			<div class="contacts">
 				<h4>NЁRDS DESIGN STUDIO</h4>
@@ -144,7 +168,26 @@
 		<section class="modal">
 			<h2>Напишите нам</h2>
 			<button class="modal-close" type="button"><span class="visually-hidden">закрыть</span></button>
-			
+			<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+				<div class="user-name">
+					<p>	
+						<label>Ваше имя:<br>
+							<input type="text" value="Представьтесь, пожалуйста" name="name" required>
+						</label>
+					</p>	
+					<p>	
+						<label>Ваш e-mail:<br>
+							<input type="email" value="Для отправки ответа" name="email" required>
+						</label>
+					</p>
+				</div>	
+				<p>
+					<label>Текст письма:<br>
+						<textarea rows="4" name="comment" required>В свободной форме</textarea>
+					</label>
+				</p>
+				<button type="submit" class="btn">ОТПРАВИТЬ</button>
+			</form>
 		</section>
 	</body>
 </html>

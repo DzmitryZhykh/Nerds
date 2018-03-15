@@ -25,6 +25,60 @@
 		</header>
 		<main>
             <section class="filter">
+                    <h2 class="visually-hidden">фильтры по шаблонам</h2>
+					<form  class="filters" 	action="https://echo.htmlacademy.ru" method="get">
+				
+						<fieldset>
+							<legend>СТОИМОСТЬ:</legend>
+							<div class="range-filter">	
+								<div class="range-controls">
+									<div class="scale"></div>
+									<div class="bar"></div>
+									<div class="min-toggle"></div>
+									<div class="max-toggle"></div>
+								</div>
+							</div>
+							<div class="price">
+								<label>ОТ <input type="text" id="min-price" value="0"></label>
+								<label>ДО <input type="text" id="max-price" value="15 000"></label>
+							</div>	
+						</fieldset>
+						<fieldset>
+							<legend>СЕТКА:</legend>
+								<ul>
+									<li class="filter-option" tabindex="5">
+										<input class="visually-hidden filter-input input-radio" type="radio" value="adaptive" name="grid" id="adaptive" checked>
+										<label for="adaptive">Адаптивная</label></li>
+									<li class="filter-option" tabindex="6">
+										<input class="visually-hidden filter-input input-radio" type="radio" value="fixed" name="grid" id="fixed">
+										<label for="fixed">Фиксированная</label></li>
+									<li class="filter-option" tabindex="7">
+										<input class="visually-hidden filter-input input-radio" type="radio" value="rubber" name="grid" id="rubber" disabled>
+										<label for="rubber">Резиновая</label></li>
+								</ul>	
+						</fieldset>
+						<fieldset>
+							<legend>ОСОБЕННОСТИ:</legend>
+								<ul>		
+									<li class="filter-option" tabindex="8">
+										<input class="visually-hidden filter-input input-checkbox" type="checkbox" name="slider" value="slider" id="slider" checked>
+										<label for="slider">Слайдер</label></li>
+									<li class="filter-option" tabindex="9">
+										<input class="visually-hidden filter-input input-checkbox" type="checkbox" name="advantages" value="advantages" id="advantages" disabled>
+										<label for="advantages">Блок преимуществ</label></li>
+									<li class="filter-option" tabindex="10">
+										<input class="visually-hidden filter-input input-checkbox" type="checkbox" name="news" value="news" id="news" checked>
+										<label for="news">Новости</label></li>
+									<li class="filter-option" tabindex="11">
+										<input class="visually-hidden filter-input input-checkbox" type="checkbox" name="feature" value="gallery" id="gallery">
+										<label for="gallery">Галерея</label></li>
+									<li class="filter-option" tabindex="12">
+										<input class="visually-hidden filter-input input-checkbox" type="checkbox" name="feature" value="basket" id="basket">
+										<label for="basket">Корзина</label></li>
+								</ul>
+						</fieldset>
+						<button type="submit" class="filter-btn" tabindex="13">ПОКАЗАТЬ</button>
+					</form>
             </section>
             <section class="catalog">
                 <h2 class="visually-hidden">Каталог</h2>
@@ -102,7 +156,7 @@
                 </ul>
             </section>
   			<section class="map">
-				<h2 class="visually-hidden">Наши контакты</h2>
+                <h2 class="visually-hidden">Наши контакты</h2>
 				<div class="contacts">
 					<h4>NЁRDS DESIGN STUDIO</h4>
 					<p>
@@ -137,7 +191,27 @@
 		</footer>
 		<section class="modal">
 			<h2>Напишите нам</h2>
-			<button class="modal-close" type="button"><span class="visually-hidden">закрыть</span></button>
+            <button class="modal-close" type="button"><span class="visually-hidden">закрыть</span></button>
+            <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+				<div class="user-name">
+					<p>	
+						<label>Ваше имя:<br>
+							<input type="text" value="Представьтесь, пожалуйста" name="name" required>
+						</label>
+					</p>	
+					<p>	
+						<label>Ваш e-mail:<br>
+							<input type="email" value="Для отправки ответа" name="email" required>
+						</label>
+					</p>
+				</div>	
+				<p>
+					<label>Текст письма:<br>
+						<textarea rows="4" name="comment" required>В свободной форме</textarea>
+					</label>
+				</p>
+				<button type="submit" class="btn">ОТПРАВИТЬ</button>
+			</form>
 		</section>
 	</body>
 </html>
