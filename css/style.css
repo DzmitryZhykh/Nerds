@@ -33,7 +33,6 @@ body {
 }
 
 .container {
-  position: relative;
   width: 1160px;
   margin: 0 auto;
 }
@@ -184,12 +183,6 @@ header {
   color: rgba(0, 0, 0, 0.3);
 }
 
-h1 {
-  font-size: 55px;
-  line-height: 55px;	
-  font-weight: 500;
-}
-
 h2 {
   font-size: 45px;
   line-height: 45px;	
@@ -255,21 +248,23 @@ h2 {
   border-radius: 50%;
 }
 
-.slider-item p {
-  max-width: 430px;
-  margin: 0;
-  margin-bottom: 33px;
+.slider-item b {
+  font-size: 55px;
+  line-height: 55px;	
+  font-weight: 500;
+  max-width: 600px;
 }
 
-.slider-item h1 {
-  max-width: 600px;
-  margin: 0;
-  margin-bottom: 27px;
+.slider-item p {
+  max-width: 430px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .slider-item {
   display: none;
-  padding: 78px 0 80px 0;
+  padding-top: 78px;
+  padding-bottom: 80px;
 }
 
 #slide1:checked ~ .slider-list .slider-item:nth-child(1) {
@@ -500,6 +495,9 @@ h2 {
 }
 
 .catalog-header h1 {
+  font-size: 55px;
+  line-height: 55px;	
+  font-weight: 500;
   margin-top: 74px;
   text-align: center;
 }
@@ -1204,7 +1202,12 @@ footer ul {
   margin-top: 10px;
   outline: none;
 }
- 
+
+.feedback-form	input:not(:invalid){
+  border-color: rgb(215, 220, 222);
+  box-sizing: border-box;
+}
+
 .feedback-form	input:hover,
 .feedback-form	textarea:hover {
   color: rgba(68, 68, 68, 0.5);
@@ -1217,7 +1220,8 @@ footer ul {
   color: rgb(0, 0, 0);
 }
 
-.feedback-form	input:invalid {
+.feedback-form	input:invalid:not(:hover):not(:focus) {
   color: rgb (231, 66, 70);
   border-color: rgb (231, 66, 70);
+  box-sizing: border-box;
 }
